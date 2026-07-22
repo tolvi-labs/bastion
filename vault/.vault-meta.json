@@ -1,0 +1,5 @@
+{
+  "workspace": "bastion",
+  "embedding_model": "nomic-embed-text",
+  "schema_version": 1
+}
