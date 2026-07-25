@@ -21,14 +21,14 @@ Engineering decisions only — the *why* of the code. **Never** put client or pr
 ```shell
 git clone https://github.com/tolvi-labs/bastion
 cd bastion
-./install.sh          # symlinks skills/bastion into ~/.claude/skills/bastion (invoke with /bastion)
+./install.sh          # symlinks skills/tolvi-bastion into ~/.claude/skills/tolvi-bastion (invoke with /tolvi-bastion)
 ```
 
 Bastion reads the repo's `vault/`; run `tolvi init` if a repo has no vault yet. Set `ANTHROPIC_API_KEY` to enable ranked retrieval via `tolvi ask`.
 
 ## Standards
 
-- Match the existing prose and structure of `skills/bastion/SKILL.md`.
+- Match the existing prose and structure of `skills/tolvi-bastion/SKILL.md`.
 - Bastion never writes implementation code — preserve that in every change.
 - The vault grows only from real, engineer-confirmed rationale; never fabricate a decision from a code read.
 - One decision per behavior change. Session logs stay out of this repo.

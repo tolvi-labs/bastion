@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # install.sh — install the Bastion Claude Code skill.
 #
-# Default: symlink skills/bastion → ~/.claude/skills/bastion so that `git pull`
+# Default: symlink skills/tolvi-bastion → ~/.claude/skills/tolvi-bastion so that `git pull`
 # on the tolvi-labs/bastion repo updates the skill automatically. Use --copy for
 # a frozen snapshot isolated from repo updates.
 #
@@ -17,7 +17,7 @@ set -euo pipefail
 # Resolve the directory this script lives in, so the source is found regardless
 # of where the user invoked it from.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SOURCE_SKILL="$SCRIPT_DIR/skills/bastion"
+SOURCE_SKILL="$SCRIPT_DIR/skills/tolvi-bastion"
 
 DEST_BASE="${HOME}/.claude/skills"
 MODE="symlink"
@@ -28,12 +28,12 @@ usage() {
   cat <<EOF
 Usage: bash install.sh [--copy] [--uninstall] [--path <dir>] [--force]
 
-Default: symlink skills/bastion into \$HOME/.claude/skills/bastion so that
+Default: symlink skills/tolvi-bastion into \$HOME/.claude/skills/tolvi-bastion so that
          'git pull' on the tolvi-labs/bastion repo updates the skill automatically.
 
 Flags:
   --copy         Deep-copy the skill instead of symlinking.
-  --uninstall    Remove the installed bastion/ skill.
+  --uninstall    Remove the installed tolvi-bastion/ skill.
   --path <dir>   Install destination base (default: \$HOME/.claude/skills).
   --force        Overwrite an existing install. Refuses by default.
   -h, --help     Show this help.
@@ -51,7 +51,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-DEST_DIR="$DEST_BASE/bastion"
+DEST_DIR="$DEST_BASE/tolvi-bastion"
 
 if [[ "$ACTION" == "uninstall" ]]; then
   if [[ -L "$DEST_DIR" ]]; then
@@ -98,7 +98,7 @@ cat <<EOF
 
 ✓ Bastion installed.
 Next steps:
-  - In any Claude Code session, invoke /bastion <plan | ticket | description> to run the crucible.
+  - In any Claude Code session, invoke /tolvi-bastion <plan | ticket | description> to run the crucible.
   - Bastion reads your repo's vault/ (run 'tolvi init' if you don't have one yet).
   - Optional: set ANTHROPIC_API_KEY to enable ranked vault retrieval via 'tolvi ask'.
 EOF
