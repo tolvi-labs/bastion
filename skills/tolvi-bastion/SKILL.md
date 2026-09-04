@@ -61,6 +61,19 @@ Ask questions ONE AT A TIME. Wait for each answer before the next. Draw every ch
 
 Source-transparency is mandatory. Every challenge names its tier — e.g. "contradicts 2 recorded decisions" vs "no precedent here; first-principles, and your answer will seed the vault."
 
+**Question shape.** Format each grill question as labeled chunks, never one paragraph:
+
+```
+**Q<n> — <short label>** [source: vault | CLAUDE.md/as-built | general judgment]
+
+Context: <the precedent or convention being checked — one or two short lines>
+Proposal: <what the plan currently does, if worth restating>
+Risks: <what's at stake if this is decided wrong, when applicable>
+Confirm: <the actual challenge, isolated — e.g. "intentional?">
+```
+
+Omit a label that has nothing to say. Keep every line short and scannable.
+
 Depth by grill_depth: light = one confirming question; standard = the flagged gaps + contradictions; full = every dimension until the thesis is defensible.
 
 Contradiction handling by negotiability:
