@@ -117,6 +117,19 @@ Plan:
 ──────────────────────────────────────
 ```
 
+Immediately after the block above, emit a second fenced `json` block carrying the same information in machine-readable form, for a downstream compile step (Magellan) to consume. Derive it from state already held at this point — the restated intent, the grill's `resolutions`, and the vault hits honored — no new retrieval:
+
+```json
+{
+  "how": "<the hardened approach, one paragraph>",
+  "scope": { "in": ["..."], "out": ["..."] },
+  "appliedDirectives": ["<directive + source, from vault hits honored during the grill>"],
+  "resolvedGaps": [{ "question": "<asked>", "answer": "<engineer's resolution>" }]
+}
+```
+
+This block is additive — it never replaces the text block above it.
+
 Then hand off: "This plan is hardened. Take it to your implementation flow." Offer to save the block to a file if the engineer wants one. Do not proceed to implementation yourself. (In the Tolvi stack, Guild writes the plan, Bastion hardens it, and only then does execution begin.)
 
 ## Step 7 — Cold-start and legacy repos
