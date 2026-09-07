@@ -128,6 +128,8 @@ Immediately after the block above, emit a second fenced `json` block carrying th
 }
 ```
 
+Each `scope.in`/`scope.out` entry is a file or directory path when the plan or the grill already named a specific one, and a short prose area description otherwise ("the auth module" is fine when no file was named).
+
 This block is additive — it never replaces the text block above it.
 
 Then hand off: "This plan is hardened. Take it to your implementation flow." Offer to save the block to a file if the engineer wants one. Do not proceed to implementation yourself. (In the Tolvi stack, Guild writes the plan, Bastion hardens it, and only then does execution begin.)
