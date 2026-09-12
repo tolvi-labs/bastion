@@ -1,6 +1,6 @@
 # vault/
 
-This is the project's decision record — the *why* behind the code, captured as we build. It is public on purpose: Tolvi tools are built with Tolvi, in the open. Bastion, in particular, reads this vault to interrogate a plan — so keeping it current is the point of the tool.
+This is the project's decision record: the *why* behind the code, captured as we build. It is public on purpose: Tolvi tools are built with Tolvi, in the open. Bastion, in particular, reads this vault to interrogate a plan, so keeping it current is the point of the tool.
 
 ## What lives here
 
@@ -8,7 +8,7 @@ Engineering **decisions** (ADR-style): architecture, mechanism choices, contract
 
 ## What does NOT live here
 
-Business strategy, roadmap prioritization, competitive assessments, client or customer names, JIRA keys, revenue, PII, security-incident specifics, and day-to-day session logs. Those belong in a **private** vault. If a decision's *why* can't be told without one of them, sanitize it ("we require idempotency keys because an incident taught us" — not the incident's details) or keep the whole decision private.
+Business strategy, roadmap prioritization, competitive assessments, client or customer names, JIRA keys, revenue, PII, security-incident specifics, and day-to-day session logs. Those belong in a **private** vault. If a decision's *why* can't be told without one of them, sanitize it ("we require idempotency keys because an incident taught us", not the incident's details) or keep the whole decision private.
 
 ## Contributing to the vault
 
