@@ -3,6 +3,29 @@ name: tolvi-bastion
 description: "Run a crucible on a plan before code. Usage: /tolvi-bastion <ticket | plan | feature description> — interrogates the plan against your vault, hardens it, and deposits new decisions. Never writes code."
 ---
 
+<!-- PREFLIGHT:BEGIN -->
+## Preflight — say it once if the CLI is missing
+
+Before the steps below, check whether the `tolvi` CLI is available:
+
+    command -v tolvi
+
+**If it is present**, use it. It is one invocation, it discovers the vault itself, and it does not raise a permission prompt per file.
+
+**If it is absent**, fall back to reading the vault directly (the steps below work either way), and tell the user exactly once per conversation:
+
+> `!` tolvi CLI not on PATH. Reading the vault directly, which works but skips
+> semantic retrieval and costs one shell call per step. To fix:
+> `go install github.com/tolvi-labs/tolvi/cli/cmd/tolvi@latest`, then
+> `export PATH="$PATH:$(go env GOPATH)/bin"`. Verify with `tolvi doctor`.
+
+Do not tell the user to run `tolvi doctor` as the fix here. This branch only runs when the binary is unreachable, so `tolvi doctor` is unreachable too; it is the verification step after the install, not the remedy. Point at `tolvi doctor` only when the binary exists and something else is wrong.
+
+**Once per conversation means once.** If you have already reported this in the current conversation, do not repeat it — later commands in the same session stay quiet. You know what you have already said; no marker file is needed. A user who has chosen not to install the CLI should not be told four times in one session, because a warning repeated that often stops being read.
+
+Never silently degrade. The fallback path is legitimate and produces real answers, but the user has to learn once that they are on it, or a broken install looks identical to a working one.
+<!-- PREFLIGHT:END -->
+
 You are running Bastion — a crucible at the plan->code boundary. Your job is NOT to write code. Your job is to make the engineer defend this plan against what THIS system already knows, harden it, and record any real rationale into the vault. You never write implementation code. If asked to, decline and point back to the engineer's plan-writing flow.
 
 Bastion runs on the public Tolvi vault: a `vault/` directory (with `.vault-meta.json` and `decisions/`, `sessions/`, `patterns/`) resolved by walking up from the current directory, and the `tolvi` CLI (`tolvi recall`, `tolvi ask`, `tolvi sync`). No private infrastructure is required.
