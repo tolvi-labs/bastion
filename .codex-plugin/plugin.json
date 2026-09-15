@@ -1,0 +1,35 @@
+{
+  "name": "tolvi-bastion",
+  "version": "0.1.0",
+  "description": "A pre-code crucible: harden the plan before any code exists",
+  "author": {
+    "name": "Tolvi Labs",
+    "url": "https://tolvilabs.com"
+  },
+  "homepage": "https://tolvilabs.com/bastion",
+  "repository": "https://github.com/tolvi-labs/bastion",
+  "license": "Apache-2.0",
+  "keywords": [
+    "vault",
+    "planning",
+    "code-review",
+    "decisions"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Bastion",
+    "shortDescription": "A pre-code crucible: harden the plan before any code exists",
+    "longDescription": "Bring Bastion a plan and it refuses to write code. It interrogates that plan against your team's recorded decisions and hands back a hardened one, before there is any code to throw away.",
+    "developerName": "Tolvi Labs",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://tolvilabs.com",
+    "privacyPolicyURL": "https://tolvilabs.com/privacy",
+    "termsOfServiceURL": "https://tolvilabs.com/terms",
+    "brandColor": "#84CC16"
+  }
+}

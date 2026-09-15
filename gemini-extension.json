@@ -1,0 +1,6 @@
+{
+  "name": "tolvi-bastion",
+  "description": "A pre-code crucible: harden the plan before any code exists",
+  "version": "0.1.0",
+  "contextFileName": "GEMINI.md"
+}

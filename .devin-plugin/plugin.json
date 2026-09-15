@@ -1,0 +1,18 @@
+{
+  "name": "tolvi-bastion",
+  "version": "0.1.0",
+  "description": "A pre-code crucible: harden the plan before any code exists",
+  "author": {
+    "name": "Tolvi Labs",
+    "url": "https://tolvilabs.com"
+  },
+  "homepage": "https://tolvilabs.com/bastion",
+  "repository": "https://github.com/tolvi-labs/bastion",
+  "license": "Apache-2.0",
+  "keywords": [
+    "vault",
+    "planning",
+    "code-review",
+    "decisions"
+  ]
+}
