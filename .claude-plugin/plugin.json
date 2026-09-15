@@ -1,0 +1,18 @@
+{
+  "name": "tolvi-bastion",
+  "description": "A pre-code crucible: interrogates a plan against your vault before any code exists, hardens it, and deposits the rationale as decisions.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Tolvi Labs",
+    "url": "https://tolvilabs.com"
+  },
+  "homepage": "https://tolvilabs.com/bastion",
+  "repository": "https://github.com/tolvi-labs/bastion",
+  "license": "Apache-2.0",
+  "keywords": [
+    "vault",
+    "planning",
+    "code-review",
+    "decisions"
+  ]
+}
