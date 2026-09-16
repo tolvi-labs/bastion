@@ -28,9 +28,9 @@ It would be too much if understanding and innovation were treated as *jobs Basti
 1. **Innovation is the upside tail, never a promised deliverable.** The reliable outputs are the hardened plan and durable understanding. Innovation is the bonus that is named but never depended on; promising it guarantees disappointment.
 2. **"Understanding" means externalizing tacit reasoning, not testing the engineer.** Bastion never checks whether you "get it"; it forces the reasoning you already hold into explicit, recorded form.
 
-## Why this replaces the overnight framing
+## Why this shape
 
-The autonomous overnight-agent approach was set aside for being autonomous, unattended, and gameable by well-written-but-wrong tickets. This design inverts each:
+An autonomous, unattended agent that takes a ticket at face value is gameable by well-written-but-wrong tickets. This design inverts each failure:
 
 - It is the **anti-autonomous** tool — it refuses to write code and makes the engineer defend the plan.
 - It is placed to the **left of the code**, on intent, where "code is the outcome, not the substrate" works *for* it: before code exists there is no outcome, only substrate — intent, constraints, rationale — which is exactly what the vault stores and what an interrogation can reach.
@@ -72,7 +72,7 @@ Bastion does not build its own index. It reads the repo's own `vault/` — `tolv
 
 ### 2. The throttle — the 4-dimension rubric, repurposed
 
-The durable kernel survives verbatim — Clarity, Task-Type Risk, Context Availability, Dependency Risk — but its consumer changes. It no longer scores "safe to hand to an unattended agent." It scores **how hard to grill the human**: high-clarity/low-risk work is waved through with one confirmation; low-clarity/high-risk work gets the full crucible. Proportional grilling is what keeps engineers from routing around the gate. The PRIME-DIRECTIVES SOP mostly retires with the autonomous run; the one directive that transfers is *never let the gate silently write code*.
+The durable kernel survives verbatim — Clarity, Task-Type Risk, Context Availability, Dependency Risk — but its consumer changes. It does not score "safe to hand to an unattended agent." It scores **how hard to grill the human**: high-clarity/low-risk work is waved through with one confirmation; low-clarity/high-risk work gets the full crucible. Proportional grilling is what keeps engineers from routing around the gate. The one directive that carries over is *never let the gate silently write code*.
 
 ### 3. The source-priority ladder — what Bastion challenges *from*
 
@@ -129,7 +129,7 @@ Bastion is connective tissue across the existing stack, not an island.
 
 ## Cold-start behavior (the "no vault" answer)
 
-No init script generates the vault. Auto-generating decisions from code is the trap we explicitly reject: code is the outcome, so generated rationale is fabrication — the same "well-written but wrong" disease that killed the overnight version. Decisions only ever come from the engineer, live, during grilling.
+No init script generates the vault. Auto-generating decisions from code is the trap we explicitly reject: code is the outcome, so generated rationale is fabrication — the same "well-written but wrong" failure this design exists to prevent. Decisions only ever come from the engineer, live, during grilling.
 
 - **Greenfield / no vault:** Bastion grills from first principles plus the rubric, using general knowledge only to generate questions (source-priority tier 3). Session one is thin; session ten is dense. Cold-start is the onboarding, not a bug.
 - **Legacy / no vault (in v0):** an optional one-time `patterns`-bootstrap — a read of the codebase that proposes `vault/patterns` entries, because conventions (naming, layering, libraries, test style) are genuinely recoverable from code. It **never** writes `decisions`.
