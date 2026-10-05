@@ -5,7 +5,7 @@
 It is the hardening layer of the Tolvi stack:
 
 ```
-Guild (plan) → Bastion (harden) → execute
+Vault → Guild (brief) → Bastion (harden) → Magellan (compile) → Forge / Claude Code / cloud (execute)
 ```
 
 ## Install
